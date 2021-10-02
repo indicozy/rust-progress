@@ -1,0 +1,1 @@
+just install cargo BRUH
