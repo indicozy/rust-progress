@@ -1,8 +1,8 @@
 fn main() {
     let s = String::from("hello");  // s comes into scope
 
-    // takes_ownership(s.clone());             // yeah I'm stupid, I need to read further TODO
-    // improve that shit
+    // takes_ownership(s.clone());             // yeah I'm stupid, I need to read further 
+    takes_ownership(&s);             // FOUND A SOLUTION!!!
     println!("{}", s);
                                     // ... and so is no longer valid here
 
@@ -15,7 +15,7 @@ fn main() {
 } // Here, x goes out of scope, then s. But because s's value was moved, nothing
   // special happens.
 
-fn takes_ownership(some_string: String) { // some_string comes into scope
+fn takes_ownership(some_string: &String) { // some_string comes into scope
     println!("{}", some_string);
 } // Here, some_string goes out of scope and `drop` is called. The backing
   // memory is freed.

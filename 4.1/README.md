@@ -9,7 +9,7 @@ Rust is a *not like other girls* when it comes to memory handling. It uses the t
 
 Stacking values do copy when declared, heaps do not, they move.
 
-Heap info is gone after used by a function, so use **Referencing instead**!
+Heap info is gone after used by a function, so use **Referencing instead**! Update: remade the solution code
 
 I guess it's enough to understand.
 
